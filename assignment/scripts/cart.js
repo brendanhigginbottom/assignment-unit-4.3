@@ -91,5 +91,28 @@ function addItem(item){
     }
 }
 
+// 4. Create a function called `removeItem`. It should:
+// Take an input parameter for a string `item`
+// Use [Array.indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) to find the index of the first matching item in the basket.
+// Use [Array.splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) to remove the first matching item from the basket.
+// Return the item removed or `null` if the item was not found
 
+/*addItem('snake');
+
+function removeItem(remove) {
+    let splicedItem = '';
+    for (let remove of basket) {
+        if(basket.indexOf(remove) < 0) {
+           splicedItem = basket.splice(basket.indexOf(remove), 1);
+           return splicedItem;
+        } else {
+            splicedItem = 'null';
+            return splicedItem;
+        }
+    }
+}
+
+console.log(removeItem('tree'));
+console.log(removeItem('snake'));
+*/
 
