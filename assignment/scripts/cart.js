@@ -85,9 +85,8 @@ function addItem(item){
     console.log(basket);
     return true;
     } else {
-        console.log('The basket is full!');
+        console.log('The basket is full! Item not added.');
         return false;
-        
     }
 }
 
@@ -97,13 +96,22 @@ function addItem(item){
 // Use [Array.splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) to remove the first matching item from the basket.
 // Return the item removed or `null` if the item was not found
 
-/*addItem('snake');
+addItem('snake');
+addItem('my boot');
+listItems();
 
-function removeItem(remove) {
+/**
+ * 
+ * @param {string} itemToRemove Item to remove from basket
+ * @returns The removed item if one was removed, 'null' if no item was removed
+ */
+
+function removeItem(itemToRemove) {
     let splicedItem = '';
-    for (let remove of basket) {
-        if(basket.indexOf(remove) < 0) {
-           splicedItem = basket.splice(basket.indexOf(remove), 1);
+    let i = 0;
+    for (i = 0; i < basket.length; i += 1) {
+        if(basket.indexOf(itemToRemove) >= 0) {
+           splicedItem = splicedItem = basket.splice(basket.indexOf(itemToRemove), 1);
            return splicedItem;
         } else {
             splicedItem = 'null';
@@ -112,7 +120,6 @@ function removeItem(remove) {
     }
 }
 
-console.log(removeItem('tree'));
-console.log(removeItem('snake'));
-*/
+console.log('No tree in the basket so expecting null:', removeItem('tree'));
+console.log('I have removed from my boot in the basket one:', removeItem('snake'));
 
